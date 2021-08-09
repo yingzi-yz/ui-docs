@@ -1,0 +1,18 @@
+.mb-0 {
+  margin-bottom: 0!important;
+}
+
+.yz-card {
+  margin: 0!important;
+}
+.yz-tip {
+  margin-bottom: 16px;
+}
+/* 高度取底数 */
+.yz-main {
+  box-sizing: border-box;
+  /* background-color: skyblue; 没设置背景颜色 */
+}
+.yz-aside {
+  box-sizing: border-box;  
+}
