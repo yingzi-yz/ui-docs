@@ -17,6 +17,10 @@ const routes = [
       name: 'install',
       component: () => import('@/views/install.vue')
     }, {
+      path: '/update',
+      name: 'update',
+      component: () => import('@/views/update.vue')
+    },{
       path: 'container',
       name: 'container',
       component: () => import('@/views/container.vue')

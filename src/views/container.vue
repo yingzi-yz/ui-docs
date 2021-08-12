@@ -1,5 +1,5 @@
 <template>
-  <div class="container-box">
+  <div class="container-wrap">
     <yz-tip>container</yz-tip> 
 
     <yz-tip class="mb-0">header-main布局</yz-tip> 
@@ -118,7 +118,7 @@
 
 <script>
 export default {
-  name: 'container',
+  name: 'containerWrap',
   data() {
     return {
       headerAttribute: ['1', '2'],
@@ -130,7 +130,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container-box {
+.container-wrap {
   padding-bottom: 80px;
   .yz-card {
     margin-bottom: 33px!important;

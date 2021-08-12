@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div class="switch-wrap">
     123
   </div>
 </template>
 
 <script>
 export default {
-  name: 'switch'
+  name: 'switchWrap'
 }
 </script>
 

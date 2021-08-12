@@ -1,10 +1,10 @@
 <template>
-  <div>drawer</div>
+  <div class="drawer-wrap">drawer</div>
 </template>
 
 <script>
 export default {
-
+  name: 'drawerWrap'
 }
 </script>
 

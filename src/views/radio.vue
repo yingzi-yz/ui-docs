@@ -1,12 +1,12 @@
 <template>
-  <div class="radio-container">
+  <div class="radio-wrap">
 
   </div>
 </template>
 
 <script>
 export default {
-  name: 'radioBox'
+  name: 'radioWrap'
 }
 </script>
 

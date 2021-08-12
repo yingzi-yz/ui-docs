@@ -1,5 +1,5 @@
 <template>
-  <div class="button-container">
+  <div class="button-wrap">
     <yz-tip>button按钮</yz-tip>
 
     <yz-tip class="mb-0">普通按钮用法</yz-tip>
@@ -96,12 +96,12 @@
 
 <script>
 export default {
-  name: 'buttonBox'
+  name: 'buttonWrap'
 }
 </script>
 
 <style lang="scss" scoped>
-.button-container {
+.button-wrap {
   padding-bottom: 80px;
   .yz-card {
     margin-bottom: 33px!important;

@@ -1,10 +1,10 @@
 <template>
-  <div>collapse</div>
+  <div class="collapse-wrap">collapse</div>
 </template>
 
 <script>
 export default {
-
+  name: 'collapseWrap'
 }
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="layout-container">
+  <div class="layout-wrap">
     <yz-container>
       <yz-header height="50px">
         yingzi-ui
@@ -18,12 +18,15 @@
 
 <script>
 export default {
-  name: 'layout',
+  name: 'layoutWrap',
   data() {
     return {
       asideList: [{
         name: '安装',
         toRouter: '/'
+      }, {
+        name: '更新日志',
+        toRouter: '/update'
       }, {
         name: 'container布局容器',
         toRouter: '/container'
@@ -97,7 +100,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.layout-container {
+.layout-wrap {
   height: 100%;
   .yz-header {
     border-bottom: 1px solid #ccc;

@@ -1,10 +1,10 @@
 <template>
-  <div>login</div>
+  <div class="login-wrap">login</div>
 </template>
 
 <script>
 export default {
-
+  name: 'loginWrap'
 }
 </script>
 

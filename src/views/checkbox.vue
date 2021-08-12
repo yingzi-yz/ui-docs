@@ -1,12 +1,12 @@
 <template>
-  <div class="checkbox-contianer">
+  <div class="checkbox-wrap">
 1
   </div>
 </template>
 
 <script>
 export default {
-  name: 'checkboxContainer'
+  name: 'checkboxWrap'
 }
 </script>
 

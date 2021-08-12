@@ -1,10 +1,10 @@
 <template>
-  <div>notice</div>
+  <div class="notice-wrap">notice</div>
 </template>
 
 <script>
 export default {
-
+  name: 'noticeWrap'
 }
 </script>
 

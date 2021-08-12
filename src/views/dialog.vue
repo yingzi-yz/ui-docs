@@ -1,10 +1,10 @@
 <template>
-  <div>dialog</div>
+  <div class="dialog-wrap">dialog</div>
 </template>
 
 <script>
 export default {
-
+  name: 'dialogWrap'
 }
 </script>
 

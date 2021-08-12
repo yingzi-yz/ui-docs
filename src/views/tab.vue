@@ -1,10 +1,10 @@
 <template>
-  <div>tab</div>
+  <div class="tab-wrap">tab</div>
 </template>
 
 <script>
 export default {
-
+  name: 'tabWrap'
 }
 </script>
 

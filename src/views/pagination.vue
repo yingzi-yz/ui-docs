@@ -1,10 +1,10 @@
 <template>
-  <div>pagination</div>
+  <div class="pagination-wrap">pagination</div>
 </template>
 
 <script>
 export default {
-
+  name: 'paginationWrap'
 }
 </script>
 

@@ -1,10 +1,10 @@
 <template>
-  <div>preview</div>
+  <div class="preview-wrap">preview</div>
 </template>
 
 <script>
 export default {
-
+  name: 'previewWrap'
 }
 </script>
 

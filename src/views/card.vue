@@ -1,10 +1,10 @@
 <template>
-  <div>card</div>
+  <div class="card-wrap">card</div>
 </template>
 
 <script>
 export default {
-
+  name: 'cardWrap'
 }
 </script>
 
