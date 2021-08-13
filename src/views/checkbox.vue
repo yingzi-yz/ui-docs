@@ -1,6 +1,19 @@
 <template>
   <div class="checkbox-wrap">
-1
+    <yz-tip>checkbox</yz-tip> 
+
+    <yz-tip class="mb-0">checkbox</yz-tip> 
+    <yz-card show-footer>
+      <template v-slot:header>
+        <div class="container-code">
+          <yz-checkbox></yz-checkbox>
+        </div>
+      </template>
+      <div class="code">
+
+      </div>
+      <template v-slot:footer></template>
+    </yz-card>  
   </div>
 </template>
 

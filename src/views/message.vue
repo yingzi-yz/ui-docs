@@ -12,10 +12,10 @@
           <yz-button type="danger" @click="showErrorMessage">error</yz-button>
         </div>
       </template>
-      <div>
+      <div class="code">
         <pre>
-          <code>
-            <div></div>
+          <code class="vue">
+            &lt;div&gt;&lt;/div&gt;
           </code>
         </pre>
       </div>
@@ -28,6 +28,11 @@
 <script>
 export default {
   name: 'messageWrap',
+  data() {
+    return {
+      
+    }
+  },
   methods: {
     showInfoMessage() {
       this.$message({
