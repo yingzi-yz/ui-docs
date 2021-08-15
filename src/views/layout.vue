@@ -5,8 +5,8 @@
         yingzi-ui
       </yz-header>
       <yz-container>
-        <yz-aside>
-          <div class="link" v-for="(v, i) in asideList" :key="i" @click="$router.push({path: v.toRouter})">{{v.name}}</div>
+        <yz-aside class="aside">
+          <div class="link" :class="{active: currentIndex == i}" v-for="(v, i) in asideList" :key="i" @click="clickAside(v, i)">{{v.name}}</div>
         </yz-aside>
         <yz-main>
           <router-view></router-view>
@@ -25,50 +25,23 @@ export default {
         name: '安装',
         toRouter: '/'
       }, {
-        name: '更新日志',
+        name: '更新日期',
         toRouter: '/update'
       }, {
-        name: 'container布局容器',
-        toRouter: '/container'
+        name: 'icon图标',
+        toRouter: '/icon'
       }, {
         name: 'button按钮',
         toRouter: '/button'
       }, {
-        name: 'input输入框',
-        toRouter: '/input'
-      }, {
-        name: 'radio单选框',
-        toRouter: '/radio'
+        name: 'container布局容器',
+        toRouter: '/container'
       }, {
         name: 'checkbox多选框',
         toRouter: '/checkbox'
       }, {
-        name: 'switch开关',
-        toRouter: '/switch'
-      }, {
-        name: 'datePicker日期选择',
-        toRouter: '/datePicker'
-      }, {
-        name: 'form表单',
-        toRouter: '/form'
-      }, {
-        name: 'pagination分页',
-        toRouter: '/pagination'
-      }, {
-        name: 'message提示',
-        toRouter: '/message'
-      }, {
-        name: 'confirm确认',
+        name: 'confirm消息框',
         toRouter: '/confirm'
-      }, {
-        name: 'notice通知',
-        toRouter: '/notice'
-      }, {
-        name: 'tab选项卡',
-        toRouter: '/tab'
-      }, {
-        name: 'dialog弹出框',
-        toRouter: '/dialog'
       }, {
         name: 'card卡片',
         toRouter: '/card'
@@ -76,26 +49,71 @@ export default {
         name: 'calendar日历',
         toRouter: '/calendar'
       }, {
+        name: 'collapse折叠框',
+        toRouter: '/collapse'
+      }, {
+        name: 'datePicker日期选择器',
+        toRouter: '/datePicker'
+      }, {
+        name: 'dialog弹出框',
+        toRouter: '/dialog'
+      }, {
         name: 'drawer抽屉',
         toRouter: '/drawer'
-      },{
-        name: 'collapse折叠',
-        toRouter: '/collapse'
       }, {
         name: 'edit编辑框',
         toRouter: '/edit'
       }, {
+        name: 'form表单',
+        toRouter: '/form'
+      }, {
+        name: 'input输入框',
+        toRouter: '/input'
+      }, {
         name: 'login登录框',
         toRouter: '/login'
+      }, {
+        name: 'message消息',
+        toRouter: '/message'
+      }, {
+        name: 'notice通知',
+        toRouter: '/notice'
       }, {
         name: 'preview预览',
         toRouter: '/preview'
       }, {
+        name: 'pagination分页',
+        toRouter: '/pagination'
+      }, {
+        name: 'radio单选框',
+        toRouter: '/radio'
+      }, {
+        name: 'switch开关',
+        toRouter: '/switch'
+      }, {
+        name: 'tab选项卡',
+        toRouter: '/tab'
+      }, {
         name: 'tip文本',
         toRouter: '/tip'
-      }]
+      }],
+      currentIndex: 0
     }
-  }
+  },
+  methods: {
+    clickAside(v, i) {
+      this.currentIndex = i;
+      this.$router.push({path: v.toRouter});
+    }
+  },
+  created() {
+    let path = this.$route.fullPath;
+    let index = this.asideList.findIndex(item => {
+      return item.toRouter == path;
+    })
+    this.currentIndex = index;
+  },
+  mounted() {}
 }
 </script>
 
@@ -108,7 +126,7 @@ export default {
     color: rgb(10, 133, 248);
   }
   .yz-aside {
-    width: 233px!important;
+    width: 252px!important;
     padding-top: 20px;
     .link {
       height: 43px;
@@ -116,6 +134,9 @@ export default {
       &:hover {
         color: rgb(10, 133, 248);
       }
+    }
+    .active {
+      color: rgb(10, 133, 248);
     }
   }
   .yz-main {

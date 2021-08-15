@@ -1,6 +1,6 @@
 <template>
   <div class="container-wrap">
-    <yz-tip>container</yz-tip> 
+    <yz-tip>container布局容器</yz-tip> 
 
     <yz-tip class="mb-0">header-main布局</yz-tip> 
     <yz-card show-footer>
@@ -12,7 +12,13 @@
           </yz-container>
         </div>
       </template>
-      <div>代码片段</div>
+      <div class="show-code">
+        <pre>
+          <code>
+            <div v-text="containerCodeOne"></div>
+          </code>
+        </pre>
+      </div>
       <template v-slot:footer></template>
     </yz-card>
 
@@ -27,9 +33,14 @@
           </yz-container>
         </div>
       </template>
-      <div>代码片段</div>
-      <template v-slot:footer>
-      </template>
+      <div class="show-code">
+        <pre>
+          <code>
+            <div v-text="containerCodeTwo"></div>
+          </code>
+        </pre>
+      </div>
+      <template v-slot:footer></template>
     </yz-card>
 
     <yz-tip class="mb-0">aside-main布局</yz-tip> 
@@ -42,9 +53,14 @@
           </yz-container>
         </div>
       </template>
-      <div>代码片段</div>
-      <template v-slot:footer>
-      </template>
+      <div class="show-code">
+        <pre>
+          <code>
+            <div v-text="containerCodeThree"></div>
+          </code>
+        </pre>
+      </div>
+      <template v-slot:footer></template>
     </yz-card>
 
     <yz-tip class="mb-0">header-aside-main布局</yz-tip> 
@@ -60,9 +76,14 @@
           </yz-container>
         </div>
       </template>
-      <div>代码片段</div>
-      <template v-slot:footer>
-      </template>
+      <div class="show-code">
+        <pre>
+          <code>
+            <div v-text="containerCodeFour"></div>
+          </code>
+        </pre>
+      </div>
+      <template v-slot:footer></template>
     </yz-card>    
 
     <yz-tip class="mb-0">header-aside-main-footer布局</yz-tip> 
@@ -79,38 +100,81 @@
           </yz-container>
         </div>
       </template>
-      <div>代码片段</div>
-      <template v-slot:footer>
-      </template>
+      <div class="show-code">
+        <pre>
+          <code>
+            <div v-text="containerCodeFive"></div>
+          </code>
+        </pre>
+      </div>
+      <template v-slot:footer></template>
     </yz-card>    
  
+    <yz-tip class="mb-0">container属性</yz-tip> 
+    <yz-collapse v-model="containerAttribute">
+      <yz-collapse-item title="height" name="1">
+        <div><span class="attribute-title">用处：</span>用于设置高度</div>
+        <div><span class="attribute-title">类型：</span>string</div>
+        <div><span class="attribute-title">可选值：</span>-</div>
+        <div><span class="attribute-title">默认值：</span>100% </div>
+      </yz-collapse-item>
+    </yz-collapse>
+
     <yz-tip class="mb-0">header属性</yz-tip> 
     <yz-collapse v-model="headerAttribute">
-      <yz-collapse-item title="background" name="1">
-        <div>背景颜色，默认为空</div>
+      <yz-collapse-item title="height" name="1">
+        <div><span class="attribute-title">用处：</span>用于设置高度</div>
+        <div><span class="attribute-title">类型：</span>string</div>
+        <div><span class="attribute-title">可选值：</span>-</div>
+        <div><span class="attribute-title">默认值：</span>100px </div>
       </yz-collapse-item>
-      <yz-collapse-item title="height" name="2">
-        <div>设置高度，默认值100px</div>
+      <yz-collapse-item title="background" name="2">
+        <div><span class="attribute-title">用处：</span>用于设置背景颜色</div>
+        <div><span class="attribute-title">类型：</span>string</div>
+        <div><span class="attribute-title">可选值：</span>-</div>
+        <div><span class="attribute-title">默认值：</span>- </div>
       </yz-collapse-item>
     </yz-collapse>
 
     <yz-tip class="mb-0">aside属性</yz-tip> 
     <yz-collapse v-model="asideAttribute">
-      <yz-collapse-item title="background" name="1">
-        <div>背景颜色，默认为空</div>
+      <yz-collapse-item title="width" name="1">
+        <div><span class="attribute-title">用处：</span>用于设置宽度</div>
+        <div><span class="attribute-title">类型：</span>string</div>
+        <div><span class="attribute-title">可选值：</span>-</div>
+        <div><span class="attribute-title">默认值：</span>100px </div>
       </yz-collapse-item>
-      <yz-collapse-item title="width" name="2">
-        <div>设置宽度，默认值100px</div>
+      <yz-collapse-item title="background" name="2">
+        <div><span class="attribute-title">用处：</span>用于设置背景颜色</div>
+        <div><span class="attribute-title">类型：</span>string</div>
+        <div><span class="attribute-title">可选值：</span>-</div>
+        <div><span class="attribute-title">默认值：</span>- </div>
       </yz-collapse-item>
     </yz-collapse>
 
     <yz-tip class="mb-0">footer属性</yz-tip> 
     <yz-collapse v-model="footerAttribute">
-      <yz-collapse-item title="background" name="1">
-        <div>背景颜色，默认为空</div>
+      <yz-collapse-item title="height" name="1">
+        <div><span class="attribute-title">用处：</span>用于设置高度</div>
+        <div><span class="attribute-title">类型：</span>string</div>
+        <div><span class="attribute-title">可选值：</span>-</div>
+        <div><span class="attribute-title">默认值：</span>100px </div>
       </yz-collapse-item>
-      <yz-collapse-item title="height" name="2">
-        <div>设置高度，默认值100px</div>
+      <yz-collapse-item title="background" name="2">
+        <div><span class="attribute-title">用处：</span>用于设置背景颜色</div>
+        <div><span class="attribute-title">类型：</span>string</div>
+        <div><span class="attribute-title">可选值：</span>-</div>
+        <div><span class="attribute-title">默认值：</span>- </div>
+      </yz-collapse-item>
+    </yz-collapse>
+
+    <yz-tip class="mb-0">main属性</yz-tip> 
+    <yz-collapse v-model="mainAttribute">
+      <yz-collapse-item title="background" name="1">
+        <div><span class="attribute-title">用处：</span>用于设置背景颜色</div>
+        <div><span class="attribute-title">类型：</span>string</div>
+        <div><span class="attribute-title">可选值：</span>-</div>
+        <div><span class="attribute-title">默认值：</span>- </div>
       </yz-collapse-item>
     </yz-collapse>
   </div>
@@ -121,9 +185,64 @@ export default {
   name: 'containerWrap',
   data() {
     return {
-      headerAttribute: ['1', '2'],
-      asideAttribute: ['1', '2'],
-      footerAttribute: ['1', '2'],
+      containerAttribute: [],
+      headerAttribute: [],
+      asideAttribute: [],
+      footerAttribute: [],
+      mainAttribute: [],
+      containerCodeOne: 
+`
+<template>
+  <yz-container>
+    <yz-header background="skyblue" height="50px">header</yz-header>
+    <yz-main>main</yz-main>
+  </yz-container>
+</template>
+`,      
+      containerCodeTwo: 
+`
+<template>
+  <yz-container>
+    <yz-header background="skyblue" height="50px">header</yz-header>
+    <yz-main>main</yz-main>
+    <yz-footer background="#6c8fff" height="50px">footer</yz-footer>
+  </yz-container>
+</template>
+`,          
+      containerCodeThree: 
+`
+<template>
+  <yz-container>
+    <yz-aside background="#008fca" width="160px">aside</yz-aside>
+    <yz-main>main</yz-main>
+  </yz-container>
+</template>
+`,          
+      containerCodeFour: 
+`
+<template>
+  <yz-container>
+    <yz-header background="skyblue" height="50px">header</yz-header>
+    <yz-container>
+      <yz-aside background="#008fca" width="160px">aside</yz-aside>
+      <yz-main>main</yz-main>
+    </yz-container>
+  </yz-container>
+</template>
+`,          
+      containerCodeFive: 
+`
+<template>
+  <yz-container>
+    <yz-header background="skyblue" height="50px">header</yz-header>
+    <yz-container>
+      <yz-aside background="#008fca" width="160px">aside</yz-aside>
+      <yz-main>main</yz-main>
+    </yz-container>
+    <yz-footer background="#6c8fff" height="50px">footer</yz-footer>
+  </yz-container>
+</template>
+`,          
     }
   }
 }
@@ -131,7 +250,6 @@ export default {
 
 <style lang="scss" scoped>
 .container-wrap {
-  padding-bottom: 80px;
   .yz-card {
     margin-bottom: 33px!important;
   }

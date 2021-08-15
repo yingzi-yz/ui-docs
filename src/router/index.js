@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+// 避免路由重复
 const originalPush = VueRouter.prototype.push
 VueRouter.prototype.push = function push(location) {
   return originalPush.call(this, location).catch(err => err)
@@ -20,7 +21,11 @@ const routes = [
       path: '/update',
       name: 'update',
       component: () => import('@/views/update.vue')
-    },{
+    }, {
+      path: '/icon',
+      name: 'icon',
+      component: () => import('@/views/icon.vue')
+    }, {
       path: 'container',
       name: 'container',
       component: () => import('@/views/container.vue')

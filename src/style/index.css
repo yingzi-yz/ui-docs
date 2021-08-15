@@ -8,5 +8,26 @@
 
 .yz-card {
   margin: 0!important;
+  margin-bottom: 33px!important;
+}
+.yz-collapse {
+  margin-bottom: 33px!important;
+}
+
+.yz-main {
+  padding-bottom: 80px!important;
+}
+
+.yz-collapse-item-content {
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.attribute-title {
+  color: #0a85f8;
+}
+
+.yz-card .show-code {
+  color: #6613eb;
 }
 
