@@ -18,11 +18,11 @@ const routes = [
       name: 'install',
       component: () => import('@/views/install.vue')
     }, {
-      path: '/update',
+      path: 'update',
       name: 'update',
       component: () => import('@/views/update.vue')
     }, {
-      path: '/icon',
+      path: 'icon',
       name: 'icon',
       component: () => import('@/views/icon.vue')
     }, {

@@ -11,7 +11,13 @@
           <i class="yz-icon-people-c"></i>
         </div>
       </template>
-      <div>代码片段</div>
+      <div class="show-code">
+        <pre>
+          <code>
+            <div v-text="iconCode"></div>
+          </code>
+        </pre>
+      </div>
       <template v-slot:footer></template>
     </yz-card>
 
@@ -37,7 +43,15 @@ export default {
       'yz-icon-clock', 'yz-icon-comment', 'yz-icon-top', 'yz-icon-bottom', 'yz-icon-left', 'yz-icon-right', 'yz-icon-cancel', 
       'yz-icon-selection', 'yz-icon-prompt', 'yz-icon-close', 'yz-icon-nickname', 'yz-icon-add', 'yz-icon-favorite', 'yz-icon-fabulous',
       'yz-icon-file', 'yz-icon-map', 'yz-icon-refresh', 'yz-icon-search', 'yz-icon-select', 'yz-icon-setting', 'yz-icon-telephone',
-      'yz-icon-upload']
+      'yz-icon-upload'],
+      iconCode: 
+`
+<template>
+  <i class="yz-icon-me-c"></i>
+  <i class="yz-icon-love-c"></i>
+  <i class="yz-icon-people-c"></i>
+</template>
+`      
     }
   }
 }

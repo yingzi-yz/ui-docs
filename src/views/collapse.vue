@@ -7,16 +7,16 @@
       <template v-slot:header>
         <div class="container-code">
           <yz-collapse v-model="collapseData">
-              <yz-collapse-item title="标题1" name="1">
-                <div>我本可以忍受黑暗，如果我不曾见过太阳</div>
-              </yz-collapse-item>
-              <yz-collapse-item title="标题2" name="2">
+            <yz-collapse-item title="标题1" name="1">
+              <div>我本可以忍受黑暗，如果我不曾见过太阳</div>
+            </yz-collapse-item>
+            <yz-collapse-item title="标题2" name="2">
               <div>青春是一个短暂的美梦，当你醒来时，它早已消失无踪</div>
-              </yz-collapse-item>
-              <yz-collapse-item title="标题3" name="3">
-                <div>雨纷纷，旧故里草木深</div>
-              </yz-collapse-item>
-            </yz-collapse>
+            </yz-collapse-item>
+            <yz-collapse-item title="标题3" name="3">
+              <div>雨纷纷，旧故里草木深</div>
+            </yz-collapse-item>
+          </yz-collapse>
         </div>
       </template>
       <div class="show-code">
@@ -69,16 +69,16 @@ export default {
 `
 <template>
   <yz-collapse v-model="collapseData">
-      <yz-collapse-item title="标题1" name="1">
-        <div>我本可以忍受黑暗，如果我不曾见过太阳</div>
-      </yz-collapse-item>
-      <yz-collapse-item title="标题2" name="2">
+    <yz-collapse-item title="标题1" name="1">
+      <div>我本可以忍受黑暗，如果我不曾见过太阳</div>
+    </yz-collapse-item>
+    <yz-collapse-item title="标题2" name="2">
       <div>青春是一个短暂的美梦，当你醒来时，它早已消失无踪</div>
-      </yz-collapse-item>
-      <yz-collapse-item title="标题3" name="3">
-        <div>雨纷纷，旧故里草木深</div>
-      </yz-collapse-item>
-    </yz-collapse>
+    </yz-collapse-item>
+    <yz-collapse-item title="标题3" name="3">
+      <div>雨纷纷，旧故里草木深</div>
+    </yz-collapse-item>
+  </yz-collapse>
 </template>
 
 export default {

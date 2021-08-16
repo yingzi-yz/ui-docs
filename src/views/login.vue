@@ -20,7 +20,7 @@
     </yz-card>  
 
     <yz-tip class="mb-0">login属性</yz-tip> 
-    <yz-collapse v-model="editGroupAttribute">
+    <yz-collapse v-model="loginAttribute">
       <yz-collapse-item title="first-row" name="1">
         <div><span class="attribute-title">用处：</span>用于显示第一行文本标题内容</div>
         <div><span class="attribute-title">类型：</span>string</div>

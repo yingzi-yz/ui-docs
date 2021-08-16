@@ -104,16 +104,26 @@ export default {
     clickAside(v, i) {
       this.currentIndex = i;
       this.$router.push({path: v.toRouter});
+    },
+    getCurrentIndex() {
+      let path = this.$route.fullPath;
+      let index = this.asideList.findIndex(item => {
+        return item.toRouter == path;
+      })
+      this.currentIndex = index;
+    },
+    toAsideDistance() {
+      let distance = this.currentIndex * 43;
+      let aside = document.getElementsByClassName('aside');
+      aside[0].scrollTop = distance;
     }
   },
   created() {
-    let path = this.$route.fullPath;
-    let index = this.asideList.findIndex(item => {
-      return item.toRouter == path;
-    })
-    this.currentIndex = index;
+    this.getCurrentIndex();
   },
-  mounted() {}
+  mounted() { 
+    this.toAsideDistance();
+  }
 }
 </script>
 
