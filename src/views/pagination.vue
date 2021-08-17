@@ -49,8 +49,8 @@ export default {
   name: 'paginationWrap',
   data() {
     return {
-      paginationAttribute: [],
-      paginationEvent: [],
+      paginationAttribute: ['1', '2'],
+      paginationEvent: ['1'],
       paginationCode:
 `
 <template>

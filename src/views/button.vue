@@ -169,7 +169,7 @@ export default {
   name: 'buttonWrap',
   data() {
     return {
-      buttonAttribute: [],
+      buttonAttribute: ['1', '2', '3', '4', '5', '6'],
       buttonCodeType: 
 `
 <template>

@@ -42,7 +42,7 @@ export default {
   name: 'tipWrap',
   data() {
     return {
-      tipAttribute: [],
+      tipAttribute: ['1', '2'],
       tipCode:
 `
 <template>

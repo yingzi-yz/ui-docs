@@ -74,8 +74,8 @@ export default {
   data() {
     return {
       dialogVisible: false,
-      dialogAttribute: [],
-      dialogSlots: [],
+      dialogAttribute: ['1', '2', '3', '4'],
+      dialogSlots: ['1', '2'],
       dialogCode:
 `
 <template>

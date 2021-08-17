@@ -37,7 +37,7 @@ export default {
   data() {
     return {
       datePickerData: new Date(),
-      datePickerAttribute: [],
+      datePickerAttribute: ['1'],
       datePickerCode:
 `
 <template>

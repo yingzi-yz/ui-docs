@@ -30,7 +30,7 @@
       <yz-collapse-item title="active-color" name="2">
         <div><span class="attribute-title">用处：</span>用于设置激活状态颜色</div>
         <div><span class="attribute-title">类型：</span>string</div>
-        <div><span class="attribute-title">可选值：</span>原生input类型 </div>
+        <div><span class="attribute-title">可选值：</span>- </div>
         <div><span class="attribute-title">默认值：</span>#409eff </div>
       </yz-collapse-item>
       <yz-collapse-item title="inactive-color" name="3">
@@ -55,7 +55,7 @@ export default {
   data() {
     return {
       switchData: true,
-      switchAttribute: [],
+      switchAttribute: ['1', '2', '3', '4'],
       switchCode:
 `
 <template>

@@ -63,8 +63,8 @@ export default {
         username: 'yingzi',
         password: '',
       },
-      formAttribute: [],
-      formItemAttribute: [],    
+      formAttribute: ['1', '2'],
+      formItemAttribute: ['1'],    
       formCode:
 `
 <template>

@@ -42,7 +42,7 @@ export default {
   name: 'confirmWrap',
   data() {
     return {
-      confirmAttribute: [],
+      confirmAttribute: ['1', '2'],
       confirmCode:
 `
 <template>

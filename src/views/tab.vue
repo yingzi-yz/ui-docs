@@ -51,8 +51,8 @@ export default {
   data() {
     return {
       tabData: 0,
-      tabGroupAttribute: [], 
-      tabItemAttribute: [], 
+      tabGroupAttribute: ['1'], 
+      tabItemAttribute: ['1'], 
       tabCode:
 `
 <template>

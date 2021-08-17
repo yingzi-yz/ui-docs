@@ -63,8 +63,8 @@ export default {
   data() {
     return {
       collapseData: [],
-      collapseAttribute: [],
-      collapseItemAttribute: [],
+      collapseAttribute: ['1'],
+      collapseItemAttribute: ['1', '2'],
       collapseCode:
 `
 <template>

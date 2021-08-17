@@ -185,11 +185,11 @@ export default {
   name: 'containerWrap',
   data() {
     return {
-      containerAttribute: [],
-      headerAttribute: [],
-      asideAttribute: [],
-      footerAttribute: [],
-      mainAttribute: [],
+      containerAttribute: ['1'],
+      headerAttribute: ['1', '2'],
+      asideAttribute: ['1', '2'],
+      footerAttribute: ['1', '2'],
+      mainAttribute: ['1'],
       containerCodeOne: 
 `
 <template>

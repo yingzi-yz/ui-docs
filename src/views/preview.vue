@@ -69,7 +69,7 @@ export default {
         width: '100px',
         height: '100px'
       },
-      previewAttribute: [],
+      previewAttribute: ['1', '2', '3', '4', '5'],
       previewCode:
 `
 <template>

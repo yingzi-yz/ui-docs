@@ -58,8 +58,8 @@ export default {
   name: 'loginWrap',
   data() {
     return {
-      loginAttribute: [],
-      loginEvent: [],
+      loginAttribute: ['1', '2', '3'],
+      loginEvent: ['1', '2'],
       loginCode:
 `
 <template>

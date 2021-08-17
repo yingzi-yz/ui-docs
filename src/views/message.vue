@@ -51,7 +51,7 @@ export default {
   name: 'messageWrap',
   data() {
     return {
-      messageAttribute: [],
+      messageAttribute: ['1', '2', '3'],
       messageCode: 
 `
 <template>

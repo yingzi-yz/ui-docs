@@ -67,8 +67,8 @@ export default {
     return {
       drawerData: false,
       position: '',
-      drawerAttribute: [],
-      drawerSlots: [],
+      drawerAttribute: ['1', '2', '3', '4'],
+      drawerSlots: ['1'],
       drawerCode:
 `
 <template>

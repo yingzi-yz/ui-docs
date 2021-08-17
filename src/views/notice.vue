@@ -57,7 +57,7 @@ export default {
   name: 'noticeWrap',
   data() {
     return {
-      noticeAttribute: [],
+      noticeAttribute: ['1', '2', '3', '4'],
       noticeCode:
 `
 <template>

@@ -81,8 +81,8 @@ export default {
     return {
       checkboxData: true,
       checkboxGroupData: ['吃饭', '睡觉', '打豆豆'],
-      checkboxAttribute: [],
-      checkboxGroupAttribute: [],
+      checkboxAttribute: ['1', '2', '3'],
+      checkboxGroupAttribute: ['1'],
       checkboxCode: 
 `
 <template v-slot:header>

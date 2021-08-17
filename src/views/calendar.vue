@@ -37,7 +37,7 @@ export default {
   data() {
     return {
       calendarData: new Date(),
-      calendarAttribute: [],
+      calendarAttribute: ['1'],
       calendarCode:
 `
 <template>

@@ -57,8 +57,8 @@ export default {
   name: 'cardWrap',
   data() {
     return {
-      cardAttribute: [],
-      cardSlots: [],
+      cardAttribute: ['1', '2'],
+      cardSlots: ['1', '2'],
       cardCode:
 `
 <template>

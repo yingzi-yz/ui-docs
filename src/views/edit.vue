@@ -75,8 +75,8 @@ export default {
       editData: '双击更改内容',
       editDataGroupDataFirst: '双击更改内容',
       editDataGroupDataSecond: '双击更改内容',
-      editAttribute: [],
-      editGroupAttribute: [],
+      editAttribute: ['1', '2'],
+      editGroupAttribute: ['1'],
       editCode:
 `
 <template>

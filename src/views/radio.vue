@@ -82,8 +82,8 @@ export default {
     return {
       gender: '0',
       fruit: '0',
-      radioAttribute: [],
-      radioGroupAttribute: [],
+      radioAttribute: ['1', '2', '3'],
+      radioGroupAttribute: ['1'],
       radioCode: 
 `
 <template>
