@@ -9,11 +9,9 @@
           <yz-pagination :total="60" :page-size="20"></yz-pagination>
         </div>
       </template>
-      <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="paginationCode"></div>
-          </code>
+      <div class="show-code">       
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="paginationCode"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -45,8 +43,10 @@
 </template>
 
 <script>
+import {commonMixins}  from '@/mixins/index.js'
 export default {
   name: 'paginationWrap',
+  mixins: [commonMixins],
   data() {
     return {
       paginationAttribute: ['1', '2'],

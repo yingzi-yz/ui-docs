@@ -18,11 +18,12 @@
           </yz-dialog>
         </div>
       </template>
-      <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="dialogCode"></div>
-          </code>
+      <div class="show-code">    
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="dialogCodeHtml"></code>
+        </pre>
+        <pre class="line-numbers">
+          <code class="language-javascript line-numbers" v-text="dialogCodeJs"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -69,14 +70,16 @@
 </template>
 
 <script>
+import {commonMixins}  from '@/mixins/index.js'
 export default {
   name: 'dialogWrap',
+  mixins: [commonMixins],
   data() {
     return {
       dialogVisible: false,
       dialogAttribute: ['1', '2', '3', '4'],
       dialogSlots: ['1', '2'],
-      dialogCode:
+      dialogCodeHtml:
 `
 <template>
   <yz-button type="primary" @click="btnClick">打开dialog</yz-button>
@@ -90,7 +93,9 @@ export default {
     </template>
   </yz-dialog>
 </template>
-
+` ,  
+      dialogCodeJs:
+`
 export default {
   data() {
     return {

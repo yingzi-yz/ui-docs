@@ -10,11 +10,12 @@
           <yz-radio label="1" v-model="gender">女</yz-radio>  
         </div>
       </template>
-      <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="radioCode"></div>
-          </code>
+      <div class="show-code">      
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="radioCodeHtml"></code>
+        </pre>
+        <pre class="line-numbers">
+          <code class="language-javascript line-numbers" v-text="radioCodeJs"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -31,11 +32,12 @@
           </yz-radio-group>
         </div>
       </template>
-      <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="radioGroupCode"></div>
-          </code>
+      <div class="show-code">      
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="radioGroupCodeHtml"></code>
+        </pre>
+        <pre class="line-numbers">
+          <code class="language-javascript line-numbers" v-text="radioGroupCodeJs"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -76,21 +78,25 @@
 </template>
 
 <script>
+import {commonMixins}  from '@/mixins/index.js'
 export default {
   name: 'radioWrap',
+  mixins: [commonMixins],
   data() {
     return {
       gender: '0',
       fruit: '0',
       radioAttribute: ['1', '2', '3'],
       radioGroupAttribute: ['1'],
-      radioCode: 
+      radioCodeHtml: 
 `
 <template>
   <yz-radio label="0" v-model="gender">男</yz-radio>  
   <yz-radio label="1" v-model="gender">女</yz-radio>  
 </template>
-
+`,
+      radioCodeJs: 
+`
 export default {
   data() {
     return {
@@ -98,7 +104,7 @@ export default {
     }
   }
 }`,
-      radioGroupCode: 
+      radioGroupCodeHtml: 
 `
 <template>
   <yz-radio-group v-model="fruit">
@@ -107,14 +113,16 @@ export default {
     <yz-radio label="2">百香果</yz-radio>  
   </yz-radio-group>
 </template>
-
+`,
+      radioGroupCodeJs: 
+`
 export default {
   data() {
     return {
       fruit: '0',
     }
   }
-}`
+}`,
     }
   }
 }

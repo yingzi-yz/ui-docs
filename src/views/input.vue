@@ -10,10 +10,11 @@
         </div>
       </template>
       <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="inputCode"></div>
-          </code>
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="inputCodeHtml"></code>
+        </pre>
+        <pre class="line-numbers">
+          <code class="language-javascript line-numbers" v-text="inputCodeJs"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -27,10 +28,11 @@
         </div>
       </template>
       <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="inputCodeDisabled"></div>
-          </code>
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="inputCodeDisabledHtml"></code>
+        </pre>
+        <pre class="line-numbers">
+          <code class="language-javascript line-numbers" v-text="inputCodeDisabledJs"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -85,19 +87,24 @@
 </template>
 
 <script>
+import {commonMixins}  from '@/mixins/index.js'
 export default {
   name: 'inputWrap',
+  mixins: [commonMixins],
   data() {
     return {
       inputDataFirst: '',
       inputDataSecond: '',
       inputAttribute: ['1', '2', '3', '4', '5', '6', '7'],
-      inputCode:
+      inputCodeHtml:
 `
 <template>
   <yz-input v-model="inputDataFirst"></yz-input>
 </template>
 
+`,       
+      inputCodeJs:
+`
 export default {
   data() {
     return {
@@ -106,12 +113,14 @@ export default {
   }
 }
 `,       
-      inputCodeDisabled:
+      inputCodeDisabledHtml:
 `
 <template>
   <yz-input v-model="inputDataSecond" disabled></yz-input>
 </template>
-
+`,       
+      inputCodeDisabledJs:
+`
 export default {
   data() {
     return {

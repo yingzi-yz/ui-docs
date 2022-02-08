@@ -11,11 +11,9 @@
           <i class="yz-icon-people-c"></i>
         </div>
       </template>
-      <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="iconCode"></div>
-          </code>
+      <div class="show-code">       
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="iconCode"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -23,7 +21,7 @@
 
     <yz-tip class="mb-0">icon图标集合</yz-tip>
     <div class="icon-collect">
-      <div v-for="(v, i) in iconList" :key="i" class="icon-item">
+      <div v-for="(v, i) in iconList" :key="i" class="icon-item" @click="clickIcon(v)">
         <i :class="v"></i>
         <div class="name">{{v}}</div>
       </div>
@@ -32,8 +30,10 @@
 </template>
 
 <script>
+import {commonMixins}  from '@/mixins/index.js'
 export default {
   name: 'iconWrap',
+  mixins: [commonMixins],
   data() {
     return {
       iconList: ['yz-icon-love-c', 'yz-icon-me-c', 'yz-icon-people-c', 'yz-icon-close-c', 'yz-icon-download-c', 'yz-icon-about-c', 
@@ -53,7 +53,29 @@ export default {
 </template>
 `      
     }
-  }
+  },
+  methods: {
+    clickIcon(icon) {
+      this.copyToBoard(icon);
+      this.$message({
+        type: 'info',
+        message: '复制成功!',
+      })
+    },
+    copyToBoard(value) {
+      const element = document.createElement('textarea');
+      document.body.appendChild(element);
+      element.value = value;
+      element.select();
+      if (document.execCommand('copy')) {
+        document.execCommand('copy');
+        document.body.removeChild(element);
+        return true
+      }
+      document.body.removeChild(element);
+      return false
+    }    
+  }  
 }
 </script>
 

@@ -17,10 +17,8 @@
         </div>
       </template>
       <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="buttonCodeType"></div>
-          </code>
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="buttonCodeType"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -40,11 +38,9 @@
           </div>
         </div>
       </template>
-      <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="buttonCodePlain"></div>
-          </code>
+      <div class="show-code">       
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="buttonCodePlain"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -64,11 +60,9 @@
           </div>
         </div>
       </template>
-      <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="buttonCodeRound"></div>
-          </code>
+      <div class="show-code">        
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="buttonCodeRound"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -88,11 +82,9 @@
           </div>
         </div>
       </template>
-      <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="buttonCodeCircle"></div>
-          </code>
+      <div class="show-code">      
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="buttonCodeCircle"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -112,11 +104,9 @@
           </div>
         </div>
       </template>
-      <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="buttonCodeDisabled"></div>
-          </code>
+      <div class="show-code">       
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="buttonCodeDisabled"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -165,8 +155,10 @@
 </template>
 
 <script>
+import {commonMixins}  from '@/mixins/index.js'
 export default {
   name: 'buttonWrap',
+  mixins: [commonMixins],
   data() {
     return {
       buttonAttribute: ['1', '2', '3', '4', '5', '6'],
@@ -226,7 +218,7 @@ export default {
 </template>
 `,              
     }
-  }
+  },  
 }
 </script>
 

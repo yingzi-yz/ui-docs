@@ -19,11 +19,12 @@
           </yz-collapse>
         </div>
       </template>
-      <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="collapseCode"></div>
-          </code>
+      <div class="show-code">        
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="collapseCodeHtml"></code>
+        </pre>
+        <pre class="line-numbers">
+          <code class="language-javascript line-numbers" v-text="collapseCodeJs"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -58,14 +59,16 @@
 </template>
 
 <script>
+import {commonMixins}  from '@/mixins/index.js'
 export default {
-  name: 'collapseWrap',
+  name: 'collapseWrap',  
+  mixins: [commonMixins],
   data() {
     return {
       collapseData: [],
       collapseAttribute: ['1'],
       collapseItemAttribute: ['1', '2'],
-      collapseCode:
+      collapseCodeHtml:
 `
 <template>
   <yz-collapse v-model="collapseData">
@@ -80,7 +83,9 @@ export default {
     </yz-collapse-item>
   </yz-collapse>
 </template>
-
+` , 
+      collapseCodeJs:
+`
 export default {
   data() {
     return {

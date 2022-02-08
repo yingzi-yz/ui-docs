@@ -8,6 +8,12 @@ Vue.use(yingziUi)
 
 import '@/style/index.css'
 
+// 引入高亮代码插件
+import prismjs from '@/static/prism.js'
+import prismCss from '@/static/prism.css'
+Vue.use(prismjs)
+Vue.use(prismCss)
+
 Vue.config.productionTip = false
 
 new Vue({

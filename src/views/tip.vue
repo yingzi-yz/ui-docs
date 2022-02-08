@@ -9,11 +9,9 @@
           <yz-tip>tip文本</yz-tip>
         </div>
       </template>
-      <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="tipCode"></div>
-          </code>
+      <div class="show-code">      
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="tipCode"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -38,8 +36,10 @@
 </template>
 
 <script>
+import {commonMixins}  from '@/mixins/index.js'
 export default {
   name: 'tipWrap',
+  mixins: [commonMixins],
   data() {
     return {
       tipAttribute: ['1', '2'],

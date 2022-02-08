@@ -12,11 +12,9 @@
           </yz-container>
         </div>
       </template>
-      <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="containerCodeOne"></div>
-          </code>
+      <div class="show-code">       
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="containerCodeOne"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -33,11 +31,9 @@
           </yz-container>
         </div>
       </template>
-      <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="containerCodeTwo"></div>
-          </code>
+      <div class="show-code">       
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="containerCodeTwo"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -53,11 +49,9 @@
           </yz-container>
         </div>
       </template>
-      <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="containerCodeThree"></div>
-          </code>
+      <div class="show-code">       
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="containerCodeThree"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -76,11 +70,9 @@
           </yz-container>
         </div>
       </template>
-      <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="containerCodeFour"></div>
-          </code>
+      <div class="show-code">       
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="containerCodeFour"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -100,11 +92,9 @@
           </yz-container>
         </div>
       </template>
-      <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="containerCodeFive"></div>
-          </code>
+      <div class="show-code">      
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="containerCodeFive"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -181,8 +171,10 @@
 </template>
 
 <script>
+import {commonMixins}  from '@/mixins/index.js'
 export default {
   name: 'containerWrap',
+  mixins: [commonMixins],
   data() {
     return {
       containerAttribute: ['1'],

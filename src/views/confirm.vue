@@ -9,11 +9,12 @@
           <yz-button type="primary" @click="showConfirm">confirm</yz-button>
         </div>
       </template>
-      <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="confirmCode"></div>
-          </code>
+      <div class="show-code">       
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="confirmCodeHtml"></code>
+        </pre>
+        <pre class="line-numbers">
+          <code class="language-javascript line-numbers" v-text="confirmCodeJs"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -38,17 +39,21 @@
 </template>
 
 <script>
+import {commonMixins}  from '@/mixins/index.js'
 export default {
   name: 'confirmWrap',
+  mixins: [commonMixins],  
   data() {
     return {
       confirmAttribute: ['1', '2'],
-      confirmCode:
+      confirmCodeHtml:
 `
 <template>
   <yz-button type="primary" @click="showConfirm">confirm</yz-button>
 </template>
-
+`,  
+      confirmCodeJs:
+`
 export default {
   methods: {
     showConfirm() {

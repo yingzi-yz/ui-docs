@@ -9,11 +9,12 @@
           <yz-preview :src="previewData" :small-img="smallImg"></yz-preview>
         </div>
       </template>
-      <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="previewCode"></div>
-          </code>
+      <div class="show-code">       
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="previewCodeHtml"></code>
+        </pre>
+        <pre class="line-numbers">
+          <code class="language-javascript line-numbers" v-text="previewCodeJs"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -56,8 +57,10 @@
 </template>
 
 <script>
+import {commonMixins}  from '@/mixins/index.js'
 export default {
   name: 'previewWrap',
+  mixins: [commonMixins],
   data() {
     return {
       previewData: ['https://imgessl.kugou.com/custom/150/20201206/20201206141703862350.jpg',
@@ -70,12 +73,14 @@ export default {
         height: '100px'
       },
       previewAttribute: ['1', '2', '3', '4', '5'],
-      previewCode:
+      previewCodeHtml:
 `
 <template>
   <yz-preview :src="previewData" :small-img="smallImg"></yz-preview>
 </template>
-
+`,       
+      previewCodeJs:
+`
 export default {
   data() {
     return {

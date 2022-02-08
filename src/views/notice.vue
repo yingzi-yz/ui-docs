@@ -12,11 +12,12 @@
           <yz-button type="primary" @click="showBottomRight">右下方显示</yz-button>
         </div>
       </template>
-      <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="noticeCode"></div>
-          </code>
+      <div class="show-code">      
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="noticeCodeHtml"></code>
+        </pre>
+        <pre class="line-numbers">
+          <code class="language-javascript line-numbers" v-text="noticeCodeJs"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -53,12 +54,14 @@
 </template>
 
 <script>
+import {commonMixins}  from '@/mixins/index.js'
 export default {
   name: 'noticeWrap',
+  mixins: [commonMixins],
   data() {
     return {
       noticeAttribute: ['1', '2', '3', '4'],
-      noticeCode:
+      noticeCodeHtml:
 `
 <template>
   <yz-button type="primary" @click="showTopLeft">左上方显示</yz-button>
@@ -66,7 +69,9 @@ export default {
   <yz-button type="primary" @click="showBottomLeft">左下方显示</yz-button>
   <yz-button type="primary" @click="showBottomRight">右下方显示</yz-button>
 </template>
-
+`,       
+      noticeCodeJs:
+`
 export default {
   methods: {
     showTopLeft() {

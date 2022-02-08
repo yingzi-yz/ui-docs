@@ -9,11 +9,12 @@
           <yz-checkbox v-model="checkboxData" label="选中"></yz-checkbox>
         </div>
       </template>
-      <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="checkboxCode"></div>
-          </code>
+      <div class="show-code">       
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="checkboxCodeHtml"></code>
+        </pre>
+        <pre class="line-numbers">
+          <code class="language-javascript line-numbers" v-text="checkboxCodeJs"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -31,10 +32,11 @@
         </div>
       </template>
       <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="checkboxGroupCode"></div>
-          </code>
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="checkboxGroupCodeHtml"></code>
+        </pre>
+        <pre class="line-numbers">
+          <code class="language-javascript line-numbers" v-text="checkboxGroupCodeJs"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -75,20 +77,24 @@
 </template>
 
 <script>
+import {commonMixins}  from '@/mixins/index.js'
 export default {
   name: 'checkboxWrap',
+  mixins: [commonMixins],  
   data() {
     return {
       checkboxData: true,
       checkboxGroupData: ['吃饭', '睡觉', '打豆豆'],
       checkboxAttribute: ['1', '2', '3'],
       checkboxGroupAttribute: ['1'],
-      checkboxCode: 
+      checkboxCodeHtml: 
 `
 <template v-slot:header>
   <yz-checkbox v-model="checkboxData" label="选中"></yz-checkbox>
-</template>
-
+</template> 
+`,
+      checkboxCodeJs: 
+`
 export default {
   data() {
     return {
@@ -97,7 +103,7 @@ export default {
   }
 }  
 `,
-      checkboxGroupCode: 
+      checkboxGroupCodeHtml: 
 `
 <template>
   <yz-checkbox-group v-model="checkboxGroupData">
@@ -106,7 +112,9 @@ export default {
     <yz-checkbox label="打豆豆"></yz-checkbox>
   </yz-checkbox-group>
 </template>
-
+`,    
+      checkboxGroupCodeJs: 
+`
 export default {
   data() {
     return {

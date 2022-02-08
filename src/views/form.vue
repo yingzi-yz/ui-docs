@@ -16,11 +16,12 @@
           </yz-form>
         </div>
       </template>
-      <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="formCode"></div>
-          </code>
+      <div class="show-code">       
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="formCodeHtml"></code>
+        </pre>
+        <pre class="line-numbers">
+          <code class="language-javascript line-numbers" v-text="formCodeJs"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -55,8 +56,10 @@
 </template>
 
 <script>
+import {commonMixins}  from '@/mixins/index.js'
 export default {
   name: 'formWrap',
+  mixins: [commonMixins],  
   data() {
     return {
       formData: {
@@ -65,7 +68,7 @@ export default {
       },
       formAttribute: ['1', '2'],
       formItemAttribute: ['1'],    
-      formCode:
+      formCodeHtml:
 `
 <template>
   <yz-form :model="formData" label-width="130px">
@@ -77,7 +80,9 @@ export default {
     </yz-form-item>
   </yz-form>
 </template>
-
+` ,   
+      formCodeJs:
+`
 export default {
   data() {
     return {

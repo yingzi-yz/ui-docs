@@ -13,11 +13,12 @@
           <yz-drawer v-model="drawerData" :position="position"></yz-drawer>
         </div>
       </template>
-      <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="drawerCode"></div>
-          </code>
+      <div class="show-code">        
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="drawerCodeHtml"></code>
+        </pre>
+        <pre class="line-numbers">
+          <code class="language-javascript line-numbers" v-text="drawerCodeJs"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -61,15 +62,17 @@
 </template>
 
 <script>
+import {commonMixins}  from '@/mixins/index.js'
 export default {
   name: 'drawerWrap',
+  mixins: [commonMixins],
   data() {
     return {
       drawerData: false,
       position: '',
       drawerAttribute: ['1', '2', '3', '4'],
       drawerSlots: ['1'],
-      drawerCode:
+      drawerCodeHtml:
 `
 <template>
   <yz-button type="primary" @click="showTop">顶部显示</yz-button>
@@ -78,7 +81,9 @@ export default {
   <yz-button type="primary" @click="showRight">右边显示</yz-button>
   <yz-drawer v-model="drawerData" :position="position"></yz-drawer>
 </template>
-
+` ,       
+      drawerCodeJs:
+`
 export default {
   data() {
     return {

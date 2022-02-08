@@ -13,11 +13,12 @@
           </yz-tab-group>
         </div>
       </template>
-      <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="tabCode"></div>
-          </code>
+      <div class="show-code">     
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="tabCodeHtml"></code>
+        </pre>
+        <pre class="line-numbers">
+          <code class="language-javascript line-numbers" v-text="tabCodeJs"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -46,14 +47,16 @@
 </template>
 
 <script>
+import {commonMixins}  from '@/mixins/index.js'
 export default {
   name: 'tabWrap',
+  mixins: [commonMixins],
   data() {
     return {
       tabData: 0,
       tabGroupAttribute: ['1'], 
       tabItemAttribute: ['1'], 
-      tabCode:
+      tabCodeHtml:
 `
 <template>
   <yz-tab-group v-model="tabData">
@@ -62,7 +65,9 @@ export default {
     <yz-tab-item label="tab切换页3">第3页</yz-tab-item>
   </yz-tab-group>
 </template>
-
+`, 
+      tabCodeJs:
+`
 export default {
   data() {
     return {

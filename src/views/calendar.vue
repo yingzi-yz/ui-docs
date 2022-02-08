@@ -9,11 +9,12 @@
           <yz-calendar v-model="calendarData"></yz-calendar>
         </div>
       </template>
-      <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="calendarCode"></div>
-          </code>
+      <div class="show-code">      
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="calendarCodeHtml"></code>
+        </pre>
+        <pre class="line-numbers">
+          <code class="language-javascript line-numbers" v-text="calendarCodeJs"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -32,18 +33,22 @@
 </template>
 
 <script>
+import {commonMixins}  from '@/mixins/index.js'
 export default {
   name: 'calendarWrap',
+  mixins: [commonMixins],
   data() {
     return {
       calendarData: new Date(),
       calendarAttribute: ['1'],
-      calendarCode:
+      calendarCodeHtml:
 `
 <template>
   <yz-calendar v-model="calendarData"></yz-calendar>
 </template>
-
+` , 
+      calendarCodeJs:
+`
 export default {
   data() {
     return {
@@ -53,7 +58,7 @@ export default {
 }
 ` , 
     }
-  }
+  },  
 }
 </script>
 

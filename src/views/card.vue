@@ -14,11 +14,9 @@
           </yz-card>
         </div>
       </template>
-      <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="cardCode"></div>
-          </code>
+      <div class="show-code">       
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="cardCode"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -53,8 +51,10 @@
 </template>
 
 <script>
+import {commonMixins}  from '@/mixins/index.js'
 export default {
-  name: 'cardWrap',
+  name: 'cardWrap',  
+  mixins: [commonMixins],
   data() {
     return {
       cardAttribute: ['1', '2'],

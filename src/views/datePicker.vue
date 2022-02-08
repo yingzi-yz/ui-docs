@@ -9,11 +9,12 @@
           <yz-date-picker v-model="datePickerData"></yz-date-picker>
         </div>
       </template>
-      <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="datePickerCode"></div>
-          </code>
+      <div class="show-code">       
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="datePickerCodeHtml"></code>
+        </pre>
+        <pre class="line-numbers">
+          <code class="language-javascript line-numbers" v-text="datePickerCodeJs"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -32,18 +33,22 @@
 </template>
 
 <script>
+import {commonMixins}  from '@/mixins/index.js'
 export default {
   name: 'datePickerWrap',
+  mixins: [commonMixins],
   data() {
     return {
       datePickerData: new Date(),
       datePickerAttribute: ['1'],
-      datePickerCode:
+      datePickerCodeHtml:
 `
 <template>
   <yz-date-picker v-model="datePickerData"></yz-date-picker>
 </template>
-
+` , 
+      datePickerCodeJs:
+`
 export default {
   data() {
     return {

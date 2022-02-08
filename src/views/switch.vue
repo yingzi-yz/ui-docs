@@ -9,11 +9,12 @@
           <yz-switch v-model="switchData"></yz-switch>
         </div>
       </template>
-      <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="switchCode"></div>
-          </code>
+      <div class="show-code">        
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="switchCodeHtml"></code>
+        </pre>
+        <pre class="line-numbers">
+          <code class="language-javascript line-numbers" v-text="switchCodeJs"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -50,18 +51,22 @@
 </template>
 
 <script>
+import {commonMixins}  from '@/mixins/index.js'
 export default {
   name: 'switchWrap',
+  mixins: [commonMixins],
   data() {
     return {
       switchData: true,
       switchAttribute: ['1', '2', '3', '4'],
-      switchCode:
+      switchCodeHtml:
 `
 <template>
   <yz-switch v-model="switchData"></yz-switch>
 </template>
-
+`,
+      switchCodeJs:
+`
 export default {
   data() {
     return {

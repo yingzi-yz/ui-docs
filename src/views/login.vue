@@ -9,11 +9,9 @@
           <yz-login></yz-login>
         </div>
       </template>
-      <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="loginCode"></div>
-          </code>
+      <div class="show-code">       
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="loginCode"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -54,8 +52,10 @@
 </template>
 
 <script>
+import {commonMixins}  from '@/mixins/index.js'
 export default {
   name: 'loginWrap',
+  mixins: [commonMixins],
   data() {
     return {
       loginAttribute: ['1', '2', '3'],

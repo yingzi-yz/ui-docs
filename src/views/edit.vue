@@ -9,11 +9,12 @@
           <yz-edit v-model="editData" content></yz-edit>
         </div>
       </template>
-      <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="editCode"></div>
-          </code>
+      <div class="show-code">      
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="editCodeHtml"></code>
+        </pre>
+        <pre class="line-numbers">
+          <code class="language-javascript line-numbers" v-text="editCodeJs"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -30,10 +31,11 @@
         </div>
       </template>
       <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="editGroupCode"></div>
-          </code>
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="editGroupCodeHtml"></code>
+        </pre>
+        <pre class="line-numbers">
+          <code class="language-javascript line-numbers" v-text="editGroupCodeJs"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -68,8 +70,10 @@
 </template>
 
 <script>
+import {commonMixins}  from '@/mixins/index.js'
 export default {
   name: 'editWrap',
+  mixins: [commonMixins],
   data() {
     return {
       editData: '双击更改内容',
@@ -77,12 +81,14 @@ export default {
       editDataGroupDataSecond: '双击更改内容',
       editAttribute: ['1', '2'],
       editGroupAttribute: ['1'],
-      editCode:
+      editCodeHtml:
 `
 <template>
   <yz-edit v-model="editData" content></yz-edit>
 </template>
-
+`,      
+      editCodeJs:
+`
 export default {
   data() {
     return {
@@ -91,7 +97,7 @@ export default {
   }
 }
 `,      
-      editGroupCode:
+      editGroupCodeHtml:
 `
 <template>
   <yz-edit-group only>
@@ -99,7 +105,9 @@ export default {
     <yz-edit v-model="editDataGroupDataSecond"></yz-edit>
   </yz-edit-group>
 </template>
-
+`,        
+      editGroupCodeJs:
+`
 export default {
   data() {
     return {

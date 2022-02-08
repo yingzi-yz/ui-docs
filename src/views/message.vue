@@ -12,11 +12,12 @@
           <yz-button type="danger" @click="showErrorMessage">error</yz-button>
         </div>
       </template>
-      <div class="show-code">
-        <pre>
-          <code>
-            <div v-text="messageCode"></div>
-          </code>
+      <div class="show-code">      
+        <pre class="line-numbers">
+          <code class="language-xml line-numbers" v-text="messageCodeHtml"></code>
+        </pre>
+        <pre class="line-numbers">
+          <code class="language-javascript line-numbers" v-text="messageCodeJs"></code>
         </pre>
       </div>
       <template v-slot:footer></template>
@@ -47,12 +48,14 @@
 </template>
 
 <script>
+import {commonMixins}  from '@/mixins/index.js'
 export default {
   name: 'messageWrap',
+  mixins: [commonMixins],
   data() {
     return {
       messageAttribute: ['1', '2', '3'],
-      messageCode: 
+      messageCodeHtml: 
 `
 <template>
   <yz-button type="info" @click="showInfoMessage">info</yz-button>
@@ -60,7 +63,9 @@ export default {
   <yz-button type="warning" @click="showWarningMessage">warning</yz-button>
   <yz-button type="danger" @click="showErrorMessage">error</yz-button>
 </template>
-
+`,      
+      messageCodeJs: 
+`
 export default {
   methods: {
     showInfoMessage() {
