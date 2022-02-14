@@ -96,6 +96,57 @@ export default {
       }, {
         name: 'tip文本',
         toRouter: '/tip'
+      }, {
+        name: 'loading加载',
+        toRouter: '/loading'
+      }, {
+        name: 'breadcrumb面包屑',
+        toRouter: '/breadcrumb'
+      }, {
+        name: 'rate评分',
+        toRouter: '/rate'
+      }, {
+        name: 'colorBoard颜色编辑器',
+        toRouter: '/colorBoard'
+      }, {
+        name: 'inputNum增减器',
+        toRouter: '/inputNum'
+      }, {
+        name: 'tooltip提示框',
+        toRouter: '/tooltip'
+      }, {
+        name: 'sliderBar滑动条',
+        toRouter: '/sliderBar'
+      }, {
+        name: 'progressBar进度条',
+        toRouter: '/progressBar'
+      }, {
+        name: 'circleProgress圆形进度条',
+        toRouter: '/circleProgress'
+      }, {
+        name: 'verifyBar验证进度条',
+        toRouter: '/verifyBar'
+      }, {
+        name: 'tableColor进度表格',
+        toRouter: '/tableColor'
+      }, {
+        name: 'tableList表格',
+        toRouter: '/tableList'
+      }, {
+        name: 'tag标签',
+        toRouter: '/tag'
+      }, {
+        name: 'weekList选择周',
+        toRouter: '/weekList'
+      }, {
+        name: 'selectList选择框',
+        toRouter: '/selectList'
+      }, {
+        name: 'upload上传',
+        toRouter: '/upload'
+      }, {
+        name: 'treeList树状',
+        toRouter: '/treeList'
       }],
       currentIndex: 0
     }

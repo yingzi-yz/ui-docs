@@ -1,5 +1,5 @@
 <template>
-  <div class="tipWrap">
+  <div class="tip-wrap">
     <yz-tip>tip文本</yz-tip>
 
     <yz-tip class="mb-0">tip文本使用方法</yz-tip> 

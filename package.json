@@ -11,7 +11,7 @@
     "prismjs": "^1.26.0",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
-    "yingzi-ui": "^0.1.6"
+    "yingzi-ui": "^0.2.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

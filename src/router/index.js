@@ -113,6 +113,74 @@ const routes = [
       path: 'tip',
       name: 'tip',
       component: () => import('@/views/tip.vue')
+    }, {
+      path: 'loading',
+      name: 'loading',
+      component: () => import('@/views/loading.vue')
+    }, {
+      path: 'breadcrumb',
+      name: 'breadcrumb',
+      component: () => import('@/views/breadcrumb.vue')
+    }, {
+      path: 'rate',
+      name: 'rate',
+      component: () => import('@/views/rate.vue')
+    }, {
+      path: 'colorBoard',
+      name: 'colorBoard',
+      component: () => import('@/views/colorBoard.vue')
+    }, {
+      path: 'inputNum',
+      name: 'inputNum',
+      component: () => import('@/views/inputNum.vue')
+    }, {
+      path: 'tooltip',
+      name: 'tooltip',
+      component: () => import('@/views/tooltip.vue')
+    }, {
+      path: 'sliderBar',
+      name: 'sliderBar',
+      component: () => import('@/views/sliderBar.vue')
+    }, {
+      path: 'progressBar',
+      name: 'progressBar',
+      component: () => import('@/views/progressBar.vue')
+    }, {
+      path: 'circleProgress',
+      name: 'circleProgress',
+      component: () => import('@/views/circleProgress.vue')
+    }, {
+      path: 'verifyBar',
+      name: 'verifyBar',
+      component: () => import('@/views/verifyBar.vue')
+    }, {
+      path: 'tableColor',
+      name: 'tableColor',
+      component: () => import('@/views/tableColor.vue')
+    }, {
+      path: 'tableList',
+      name: 'tableList',
+      component: () => import('@/views/tableList.vue')
+    }, {
+      path: 'tag',
+      name: 'tag',
+      component: () => import('@/views/tag.vue')
+    }, {
+      path: 'weekList',
+      name: 'weekList',
+      component: () => import('@/views/weekList.vue')
+    }, {
+      path: 'selectList',
+      name: 'selectList',
+      component: () => import('@/views/selectList.vue')
+    }, {
+      path: 'upload',
+      name: 'upload',
+      component: () => import('@/views/upload.vue')
+    }, {
+      path: 'treeList',
+      name: 'treeList',
+      component: () => import('@/views/treeList.vue')
     }]
   },
 ]

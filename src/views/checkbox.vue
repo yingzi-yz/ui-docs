@@ -62,6 +62,19 @@
         <div><span class="attribute-title">可选值：</span>- </div>
         <div><span class="attribute-title">默认值：</span>- </div>
       </yz-collapse-item>
+      <yz-collapse-item title="half" name="4">
+        <div><span class="attribute-title">用处：</span>用于设置是否半选</div>
+        <div><span class="attribute-title">类型：</span>string</div>
+        <div><span class="attribute-title">可选值：</span>- </div>
+        <div><span class="attribute-title">默认值：</span>- </div>
+      </yz-collapse-item>
+    </yz-collapse>  
+
+    <yz-tip class="mb-0">checkbox事件</yz-tip> 
+    <yz-collapse v-model="checkboxEvent">
+      <yz-collapse-item title="change" name="1">
+        <div><span class="attribute-title">用处：</span>复选框改变事件，返回true / false</div>
+      </yz-collapse-item>
     </yz-collapse>  
 
     <yz-tip class="mb-0">checkbox-group属性</yz-tip> 
@@ -85,7 +98,8 @@ export default {
     return {
       checkboxData: true,
       checkboxGroupData: ['吃饭', '睡觉', '打豆豆'],
-      checkboxAttribute: ['1', '2', '3'],
+      checkboxAttribute: ['1', '2', '3', '4'],
+      checkboxEvent: ['1'],
       checkboxGroupAttribute: ['1'],
       checkboxCodeHtml: 
 `

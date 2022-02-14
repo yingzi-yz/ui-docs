@@ -6,7 +6,7 @@
     <yz-card show-footer>
       <template v-slot:header>
         <div class="container-code">
-          <yz-pagination :total="60" :page-size="20"></yz-pagination>
+          <yz-pagination :total="200" :page-size="20"></yz-pagination>
         </div>
       </template>
       <div class="show-code">       

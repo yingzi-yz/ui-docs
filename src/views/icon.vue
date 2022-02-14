@@ -39,7 +39,7 @@ export default {
       iconList: ['yz-icon-love-c', 'yz-icon-me-c', 'yz-icon-people-c', 'yz-icon-close-c', 'yz-icon-download-c', 'yz-icon-about-c', 
       'yz-icon-scan-c', 'yz-icon-setting-c', 'yz-icon-statistics-c', 'yz-icon-full-screen-c', 'yz-icon-delete-c', 'yz-icon-lock-c',
       'yz-icon-car-c', 'yz-icon-gold-c', 'yz-icon-calendar-c', 'yz-icon-picture-c', 'yz-icon-computer-c', 'yz-icon-address-book-c',
-      'yz-icon-to-top', 'yz-icon-to-bottom', 'yz-icon-show', 'yz-icon-hide', 'yz-icon-star', 'yz-icon-share', 'yz-icon-more',
+      'yz-icon-star-c', 'yz-icon-to-top', 'yz-icon-to-bottom', 'yz-icon-show', 'yz-icon-hide', 'yz-icon-star', 'yz-icon-share', 'yz-icon-more',
       'yz-icon-clock', 'yz-icon-comment', 'yz-icon-top', 'yz-icon-bottom', 'yz-icon-left', 'yz-icon-right', 'yz-icon-cancel', 
       'yz-icon-selection', 'yz-icon-prompt', 'yz-icon-close', 'yz-icon-nickname', 'yz-icon-add', 'yz-icon-favorite', 'yz-icon-fabulous',
       'yz-icon-file', 'yz-icon-map', 'yz-icon-refresh', 'yz-icon-search', 'yz-icon-select', 'yz-icon-setting', 'yz-icon-telephone',
