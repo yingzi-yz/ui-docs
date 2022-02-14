@@ -59,6 +59,7 @@
 
 <script>
 import {commonMixins}  from '@/mixins/index.js'
+import {debounce}  from '@/utils/index.js'
 export default {
   name: 'uploadWrap',
   mixins: [commonMixins],
@@ -215,12 +216,12 @@ export default {
     }
   },
   methods: {
-    treeClick(e) {
+    treeClick: debounce(function(e) {
       this.$message({
         type: 'success',
         message: '选中了'+e
       })
-    },
+    }, 1000),
   }
 }
 </script>
