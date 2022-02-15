@@ -52,7 +52,7 @@ export default {
 export default {
   data() {
     return {
-      color: ',
+      color: '#FF0000',
     }
   }
 }

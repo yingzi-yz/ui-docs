@@ -87,6 +87,12 @@
         <div><span class="attribute-title">可选值：</span>-</div>
         <div><span class="attribute-title">默认值：</span>[]</div>
       </yz-collapse-item>
+      <yz-collapse-item title="draggable" name="2">
+        <div><span class="attribute-title">用处：</span>用于设置tag标签是否可拖拽</div>
+        <div><span class="attribute-title">类型：</span>boolean</div>
+        <div><span class="attribute-title">可选值：</span>true / false</div>
+        <div><span class="attribute-title">默认值：</span>false</div>
+      </yz-collapse-item>
     </yz-collapse> 
 
     <yz-tip class="mb-0">tag事件</yz-tip> 

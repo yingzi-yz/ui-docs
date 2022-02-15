@@ -2,6 +2,10 @@
   <div class="update-wrap">
     <yz-tip>更新日期</yz-tip>
     <yz-collapse v-model="versionData">
+      <yz-collapse-item title="0.2.0版本" name="3">
+        <div>发布时间：2022-02-14</div>
+        <div>增加若干组件</div>
+      </yz-collapse-item>      
       <yz-collapse-item title="0.16版本" name="2">
         <div>发布时间：2021-08-14</div>
         <div>修改了部分组件样式</div>
@@ -19,7 +23,7 @@ export default {
   name: 'updateWrap',
   data() {
     return {
-      versionData: ['2']
+      versionData: ['3']
     }
   }
 }

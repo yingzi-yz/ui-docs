@@ -22,25 +22,25 @@
 
     <yz-tip class="mb-0">verifyBar属性</yz-tip> 
     <yz-collapse v-model="verifyBarAttribute">
-      <yz-collapse-item title="start-icon" name="1">
+      <yz-collapse-item title="startIcon" name="1">
         <div><span class="attribute-title">用处：</span>开始的图标</div>
         <div><span class="attribute-title">类型：</span>string</div>
         <div><span class="attribute-title">可选值：</span>-</div>
         <div><span class="attribute-title">默认值：</span>yz-icon-right</div>
       </yz-collapse-item>
-      <yz-collapse-item title="start-text" name="2">
+      <yz-collapse-item title="startText" name="2">
         <div><span class="attribute-title">用处：</span>开始的文字</div>
         <div><span class="attribute-title">类型：</span>string</div>
         <div><span class="attribute-title">可选值：</span>-</div>
         <div><span class="attribute-title">默认值：</span>拖动滑块到最右边</div>
       </yz-collapse-item>       
-      <yz-collapse-item title="success-icon" name="3">
+      <yz-collapse-item title="successIcon" name="3">
         <div><span class="attribute-title">用处：</span>成功的图标</div>
         <div><span class="attribute-title">类型：</span>string</div>
         <div><span class="attribute-title">可选值：</span>-</div>
         <div><span class="attribute-title">默认值：</span>yz-icon-select</div>
       </yz-collapse-item>     
-      <yz-collapse-item title="success-text" name="4">
+      <yz-collapse-item title="successText" name="4">
         <div><span class="attribute-title">用处：</span>成功文字</div>
         <div><span class="attribute-title">类型：</span>string</div>
         <div><span class="attribute-title">可选值：</span>-</div>
